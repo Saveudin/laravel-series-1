@@ -1,6 +1,8 @@
 <?php
 
 use App\Models\Post;
+use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Arr;
 use PharIo\Manifest\Author;
 use Illuminate\Support\Facades\Route;
@@ -12,14 +14,29 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', function() {
+
+    // $posts = Post::with('category', 'author')->latest()->get();
+
     return view('posts', ['title' => 'Blog', 'posts' => Post::all()]);
 });
 
-Route::get('/posts/{id}', function($id) {
+Route::get('/posts/{id}', function(Post $id) {
 
-    $post = Post::find($id);
+    return view('post', ['title' => 'Single Post', 'post' => $id]);
+});
 
-    return view('post', ['title' => 'Single Post', 'post' => $post]);
+Route::get('/author/{user:username}', function(User $user) {
+
+    // $posts = $user->posts->load(['category', 'author']);
+
+    return view('posts', ['title' => count($user->posts) . ' Articles By ' . $user->name, 'posts' => $user->posts]);
+});
+
+Route::get('/category/{category}', function(Category $category) {
+
+    // $posts = $category->posts->load(['category', 'author']);
+
+    return view('posts', ['title' => count($category->posts) . ' Articles Category of ' . $category->name, 'posts' => $category->posts]);
 });
 
 Route::get('/about', function() {
