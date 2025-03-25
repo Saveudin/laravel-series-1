@@ -17,7 +17,7 @@ Route::get('/posts', function() {
 
     // $posts = Post::with('category', 'author')->latest()->get();
 
-    return view('posts', ['title' => 'Blog', 'posts' => Post::all()]);
+    return view('posts', ['title' => 'Blogs', 'posts' => Post::all()]);
 });
 
 Route::get('/posts/{id}', function(Post $id) {

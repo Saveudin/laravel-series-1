@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
             'name' => 'Misono Mika',
             'username' => 'mikaxd',
             'email' => 'misonomika@trinity.com',
+            'img' => 'img/Mika.jpg',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10)
@@ -27,6 +28,7 @@ class UserSeeder extends Seeder
             'name' => 'Onikata Kayoko',
             'username' => 'kayoko13',
             'email' => 'kayoko@gehenna@gmail.com',
+            'img' => 'img/Kayoko.jpg',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10)
@@ -35,6 +37,7 @@ class UserSeeder extends Seeder
             'name' => 'Ryuuge Kisaki',
             'username' => 'kiki99',
             'email' => 'kisaki@shanhaijing@gmail.com',
+            'img' => 'img/Kisaki.jpg',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10)
@@ -43,6 +46,7 @@ class UserSeeder extends Seeder
             'name' => 'Ushio Noa',
             'username' => 'noachan',
             'email' => 'noa@millenium@gmail.com',
+            'img' => 'img/Noa.jpg',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10)
@@ -51,6 +55,7 @@ class UserSeeder extends Seeder
             'name' => 'Hayase Yuuka',
             'username' => 'yuuka100kg',
             'email' => 'yuuka@millenium.com',
+            'img' => 'img/Yuuka.jpg',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10)
